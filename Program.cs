@@ -1,10 +1,10 @@
 ﻿using NLog;
 
 // See https://aka.ms/new-console-template for more information
-string path = Directory.GetCurrentDirectory() + "\\nlog.config";
+string path = Directory.GetCurrentDirectory() + "/nlog.config";
 
 // create instance of Logger
-var logger = LogManager.Setup().LoadConfigurationFromFile().GetCurrentClassLogger();
+var logger = LogManager.Setup().LoadConfigurationFromFile(path).GetCurrentClassLogger();
 
 // log sample messages
 logger.Trace("Sample trace message");
